@@ -1,0 +1,39 @@
+//  Core
+
+.popover {
+  box-shadow: $box-shadow-sm;
+}
+
+.popover-custom-lg {
+  & > .popover {
+    max-width: $popover-max-width * 1.5;
+  }
+}
+
+.popover-custom-md {
+  & > .popover {
+    width: $popover-max-width * 1.5;
+    max-width: $popover-max-width * 1.5;
+  }
+}
+
+.popover-custom-xl {
+  & > .popover {
+    width: $popover-max-width * 2;
+    max-width: $popover-max-width * 2;
+  }
+}
+
+.popover-custom-wrapper {
+  & > .popover {
+    .popover-body {
+      padding: 0;
+    }
+  }
+}
+
+.popover-max-width {
+  & > .popover {
+    max-width: none;
+  }
+}
