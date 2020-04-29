@@ -1,101 +1,286 @@
-import React, { Component } from "react";
-import {
-  Route,
-  BrowserRouter as Router,
-  Switch,
-  Redirect
-} from "react-router-dom";
-import Home from "./pages/Home";
-import Chat from "./pages/Chat";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import { auth } from "./services/firebase";
+import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import configureStore from './config/configureStore';
+import { Provider } from 'react-redux';
+import Routes from './Routes';
+import ScrollToTop from './utils/ScrollToTop';
+import { ToastContainer, toast } from 'react-toastify';
 import './assets/base.scss';
 
-function PrivateRoute({ component: Component, authenticated, ...rest }) {
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        authenticated === true ? (
-          <Component {...props} />
-        ) : (
-            <Redirect
-              to={{ pathname: "/login", state: { from: props.location } }}
-            />
-          )
-      }
-    />
-  );
-}
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  fab,
+  faFacebook,
+  faTwitter,
+  faVuejs,
+  faReact,
+  faHtml5,
+  faGoogle,
+  faInstagram,
+  faPinterest,
+  faYoutube,
+  faDiscord,
+  faSlack,
+  faDribbble,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  far,
+  faSquare,
+  faLifeRing,
+  faCheckCircle,
+  faTimesCircle,
+  faDotCircle,
+  faThumbsUp,
+  faComments,
+  faFolderOpen,
+  faTrashAlt,
+  faFileImage,
+  faFileArchive,
+  faCommentDots,
+  faFolder,
+  faKeyboard,
+  faCalendarAlt,
+  faEnvelope,
+  faAddressCard,
+  faMap,
+  faObjectGroup,
+  faImages,
+  faUser,
+  faLightbulb,
+  faGem,
+  faClock,
+  faUserCircle,
+  faQuestionCircle,
+  faBuilding,
+  faBell,
+  faFileExcel,
+  faFileAudio,
+  faFileVideo,
+  faFileWord,
+  faFilePdf,
+  faFileCode,
+  faFileAlt,
+  faEye,
+  faChartBar
+} from '@fortawesome/free-regular-svg-icons';
+import {
+  fas,
+  faAngleDoubleRight,
+  faAngleDoubleLeft,
+  faSmile,
+  faHeart,
+  faBatteryEmpty,
+  faBatteryFull,
+  faChevronRight,
+  faSitemap,
+  faPrint,
+  faMapMarkedAlt,
+  faTachometerAlt,
+  faAlignCenter,
+  faExternalLinkAlt,
+  faShareSquare,
+  faInfoCircle,
+  faSync,
+  faQuoteRight,
+  faStarHalfAlt,
+  faShapes,
+  faCarBattery,
+  faTable,
+  faCubes,
+  faPager,
+  faCameraRetro,
+  faBomb,
+  faNetworkWired,
+  faBusAlt,
+  faBirthdayCake,
+  faEyeDropper,
+  faUnlockAlt,
+  faDownload,
+  faAward,
+  faPlayCircle,
+  faReply,
+  faUpload,
+  faBars,
+  faEllipsisV,
+  faSave,
+  faSlidersH,
+  faCaretRight,
+  faChevronUp,
+  faPlus,
+  faLemon,
+  faChevronLeft,
+  faTimes,
+  faChevronDown,
+  faFilm,
+  faSearch,
+  faEllipsisH,
+  faCog,
+  faArrowsAltH,
+  faPlusCircle,
+  faAngleRight,
+  faAngleUp,
+  faAngleLeft,
+  faAngleDown,
+  faArrowUp,
+  faArrowDown,
+  faArrowRight,
+  faArrowLeft,
+  faStar,
+  faSignOutAlt,
+  faLink
+} from '@fortawesome/free-solid-svg-icons';
+library.add(
+  far,
+  faSquare,
+  faLifeRing,
+  faCheckCircle,
+  faTimesCircle,
+  faDotCircle,
+  faThumbsUp,
+  faComments,
+  faFolderOpen,
+  faTrashAlt,
+  faFileImage,
+  faFileArchive,
+  faCommentDots,
+  faFolder,
+  faKeyboard,
+  faCalendarAlt,
+  faEnvelope,
+  faAddressCard,
+  faMap,
+  faObjectGroup,
+  faImages,
+  faUser,
+  faLightbulb,
+  faGem,
+  faClock,
+  faUserCircle,
+  faQuestionCircle,
+  faBuilding,
+  faBell,
+  faFileExcel,
+  faFileAudio,
+  faFileVideo,
+  faFileWord,
+  faFilePdf,
+  faFileCode,
+  faFileAlt,
+  faEye,
+  faChartBar
+);
+library.add(
+  fab,
+  faFacebook,
+  faTwitter,
+  faVuejs,
+  faReact,
+  faHtml5,
+  faGoogle,
+  faInstagram,
+  faPinterest,
+  faYoutube,
+  faDiscord,
+  faSlack,
+  faDribbble,
+  faGithub
+);
+library.add(
+  fas,
+  faAngleDoubleRight,
+  faAngleDoubleLeft,
+  faSmile,
+  faHeart,
+  faBatteryEmpty,
+  faBatteryFull,
+  faChevronRight,
+  faSitemap,
+  faPrint,
+  faMapMarkedAlt,
+  faTachometerAlt,
+  faAlignCenter,
+  faExternalLinkAlt,
+  faShareSquare,
+  faInfoCircle,
+  faSync,
+  faQuoteRight,
+  faStarHalfAlt,
+  faShapes,
+  faCarBattery,
+  faTable,
+  faCubes,
+  faPager,
+  faCameraRetro,
+  faBomb,
+  faNetworkWired,
+  faBusAlt,
+  faBirthdayCake,
+  faEyeDropper,
+  faUnlockAlt,
+  faDownload,
+  faAward,
+  faPlayCircle,
+  faReply,
+  faUpload,
+  faBars,
+  faEllipsisV,
+  faSave,
+  faSlidersH,
+  faCaretRight,
+  faChevronUp,
+  faPlus,
+  faLemon,
+  faChevronLeft,
+  faTimes,
+  faChevronDown,
+  faFilm,
+  faSearch,
+  faEllipsisH,
+  faCog,
+  faArrowsAltH,
+  faPlusCircle,
+  faAngleRight,
+  faAngleUp,
+  faAngleLeft,
+  faAngleDown,
+  faArrowUp,
+  faArrowDown,
+  faArrowRight,
+  faArrowLeft,
+  faStar,
+  faSignOutAlt,
+  faLink
+);
 
-function PublicRoute({ component: Component, authenticated, ...rest }) {
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        authenticated === false ? (
-          <Component {...props} />
-        ) : (
-            <Redirect to="/chat" />
-          )
-      }
-    />
-  );
-}
+const store = configureStore();
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      authenticated: false,
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    auth().onAuthStateChanged(user => {
-      if (user) {
-        this.setState({
-          authenticated: true,
-          loading: false
-        });
-      } else {
-        this.setState({
-          authenticated: false,
-          loading: false
-        });
-      }
-    });
-  }
-
   render() {
-    return this.state.loading === true ? (
-      <div className="spinner-border text-success" role="status">
-        <span className="sr-only">Loading...</span>
-      </div>
-    ) : (
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <PrivateRoute
-              path="/chat"
-              authenticated={this.state.authenticated}
-              component={Chat}
-            />
-            <PublicRoute
-              path="/signup"
-              authenticated={this.state.authenticated}
-              component={Signup}
-            />
-            <PublicRoute
-              path="/login"
-              authenticated={this.state.authenticated}
-              component={Login}
-            />
-          </Switch>
-        </Router>
-      );
+    return (
+      <Provider store={store}>
+        <BrowserRouter basename="/home/">
+          <ScrollToTop>
+            <Routes />
+          </ScrollToTop>
+          <ToastContainer
+            enableMultiContainer
+            containerId={'A'}
+            position={toast.POSITION.BOTTOM_LEFT}
+          />
+          <ToastContainer
+            enableMultiContainer
+            containerId={'B'}
+            position={toast.POSITION.TOP_RIGHT}
+          />
+          <ToastContainer
+            enableMultiContainer
+            containerId={'C'}
+            position={toast.POSITION.BOTTOM_CENTER}
+          />
+        </BrowserRouter>
+      </Provider>
+    );
   }
 }
 

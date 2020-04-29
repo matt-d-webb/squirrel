@@ -1,0 +1,145 @@
+import React, { Fragment } from 'react';
+
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import {
+  Row,
+  Col,
+  FormGroup,
+  Input,
+  UncontrolledTooltip,
+  Button
+} from 'reactstrap';
+
+import svgImage9 from '../../../assets/images/illustrations/login.svg';
+
+export default function LivePreviewExample() {
+  return (
+    <Fragment>
+      <div className="app-wrapper min-vh-100">
+        <div className="app-main min-vh-100">
+          <Button
+            tag={Link}
+            size="lg"
+            outline
+            color="first"
+            className="btn-go-back"
+            to="/DashboardDefault">
+            <span className="btn-wrapper--icon">
+              <FontAwesomeIcon icon={['fas', 'arrow-left']} />
+            </span>
+            <span className="btn-wrapper--label">Back to dashboard</span>
+          </Button>
+          <div className="app-content p-0">
+            <div className="app-content--inner d-flex align-items-center">
+              <div className="flex-grow-1 w-100 d-flex align-items-center">
+                <div className="bg-composed-wrapper--content py-5">
+                  <div className="container">
+                    <Row>
+                      <Col
+                        lg="5"
+                        className="d-none d-lg-flex align-items-center">
+                        <img
+                          alt="..."
+                          className="w-100 mx-auto d-block img-fluid"
+                          src={svgImage9}
+                        />
+                      </Col>
+                      <Col
+                        lg="7"
+                        sm="12"
+                        className=" d-flex align-items-center">
+                        <div className="pl-0 pl-md-5">
+                          <div className="text-black mt-3">
+                            <span className="text-left text-sm-center">
+                              <h1 className="display-3 text-lg-left text-center mb-3 font-weight-bold">
+                                Login to your account
+                              </h1>
+                              <p className="font-size-lg text-lg-left text-center mb-0 text-black-50">
+                                We're glad you're working on your app. Login
+                                below to continue.
+                              </p>
+                            </span>
+                            <div className="bg-white rounded p-4 my-4">
+                              <div className="text-black-50 text-center mb-3">
+                                Sign in with
+                              </div>
+                              <Row>
+                                <Col>
+                                  <Button
+                                    color="facebook"
+                                    block
+                                    id="btnFacebookTooltip">
+                                    <span className="btn-wrapper--icon">
+                                      <FontAwesomeIcon
+                                        icon={['fab', 'facebook']}
+                                      />
+                                    </span>
+                                  </Button>
+                                  <UncontrolledTooltip target="btnFacebookTooltip">
+                                    Facebook
+                                  </UncontrolledTooltip>
+                                </Col>
+                                <Col>
+                                  <Button
+                                    color="twitter"
+                                    block
+                                    id="btnTwitterTooltip">
+                                    <span className="btn-wrapper--icon">
+                                      <FontAwesomeIcon
+                                        icon={['fab', 'twitter']}
+                                      />
+                                    </span>
+                                  </Button>
+                                  <UncontrolledTooltip target="btnTwitterTooltip">
+                                    Twitter
+                                  </UncontrolledTooltip>
+                                </Col>
+                              </Row>
+                            </div>
+                            <div>
+                              <form>
+                                <FormGroup>
+                                  <label>Email address</label>
+                                  <Input
+                                    placeholder="yourname@yourmail.com"
+                                    type="email"
+                                  />
+                                </FormGroup>
+                                <div className="form-group mb-4">
+                                  <div className="d-flex justify-content-between">
+                                    <label>Password</label>
+                                    <Link to="/PagesRecoverPassword">
+                                      Forgot password?
+                                    </Link>
+                                  </div>
+                                  <Input
+                                    placeholder="Enter your password"
+                                    type="password"
+                                  />
+                                </div>
+
+                                <Button size="lg" block={true} color="second">
+                                  Login
+                                </Button>
+                              </form>
+                            </div>
+                            <div className="text-center pt-4 text-black-50">
+                              Don't have an account?{' '}
+                              <Link to="/PagesRegister">Create an Account</Link>
+                            </div>
+                          </div>
+                        </div>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+}

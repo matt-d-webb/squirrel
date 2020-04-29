@@ -1,15 +1,24 @@
-// Bamburgh React Admin Dashboard with Reactstrap PRO Components
+// Squirrel Components
 
+@import "components/Accordions/base";
 @import "components/Avatars/base";
 @import "components/Badges/base";
 @import "components/Buttons/base";
 @import "components/Cards1/base";
+@import "components/Cards2/base";
+@import "components/Cards5/base";
 @import "components/Dropdowns/base";
 @import "components/RegularTables1/base";
+@import "components/FormsControls/base";
+@import "components/FormsDatepicker/base";
+@import "components/FormsWizard/base";
+@import "components/GuidedTours/base";
 @import "components/ListGroups/base";
 @import "components/Modals/base";
 @import "components/Pagination/base";
+@import "components/FeatureSections/base";
 @import "components/ProgressBars/base";
+@import "components/Ratings/base";
 @import "components/Scrollable/base";
 @import "components/SearchBars/base";
 @import "components/Tabs/base";
@@ -20,7 +29,14 @@
 @import "components/Buttons/ButtonsGradients/base";
 @import "components/Buttons/ButtonsIcons/base";
 @import "components/Cards1/Cards1Examples2/base";
+@import "components/Cards7/Cards7Examples46/base";
 @import "components/Dropdowns/DropdownsIntegrations/base";
+@import "components/FormsSlider/FormsSliderColors/base";
+@import "components/FormsToggleSwitch/FormsToggleSwitchColors/base";
+@import "components/FormsToggleSwitch/FormsToggleSwitchAlterante/base";
+@import "components/FormsWizard/FormsWizardVertical/base";
+@import "components/FormsWizard/FormsWizardIntegrationOne/base";
+@import "components/FormsWizard/FormsWizardIntegrationTwo/base";
 @import "components/Icons/IconsFlags/base";
 @import "components/Modals/ModalsColors/base";
 @import "components/NavigationMenus/NavigationMenusVerticalBasic/base";
@@ -32,6 +48,14 @@
 @import "components/Pagination/PaginationSizing/base";
 @import "components/Pagination/PaginationColors/base";
 @import "components/Pagination/PaginationDynamic/base";
+@import "components/FooterSections/FooterSections1/base";
+@import "components/HeaderSections/HeaderSections1/base";
+@import "components/HeroSections/HeroSections1/base";
+@import "components/Ratings/RatingsCustomIconsOne/base";
+@import "components/Ratings/RatingsCustomIconsTwo/base";
+@import "components/Ribbons/RibbonsHorizontal/base";
+@import "components/Ribbons/RibbonsVertical/base";
+@import "components/Ribbons/RibbonsAngle/base";
 @import "components/Tabs/TabsColors/base";
 @import "components/Tabs/TabsAnimated/base";
 @import "components/Timelines/TimelinesColors/base";
