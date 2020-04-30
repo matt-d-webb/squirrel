@@ -25,7 +25,7 @@ export default function LivePreviewExample() {
             size="lg"
             color="success"
             className="btn-go-back"
-            to="/DashboardDefault">
+            to="/dashboard">
             <span className="btn-wrapper--icon">
               <FontAwesomeIcon icon={['fas', 'arrow-left']} />
             </span>

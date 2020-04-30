@@ -22,22 +22,7 @@ export default function LivePreviewExample() {
     <Fragment>
       <Card className="card-box mb-5">
         <div className="card-header pr-2">
-          <div className="card-header--title">Employees status</div>
-          <div className="card-header--actions">
-            <Button
-              tag="a"
-              href="#/"
-              onClick={e => e.preventDefault()}
-              size="sm"
-              color="link"
-              className="text-primary"
-              id="RefreshTooltip1">
-              <FontAwesomeIcon icon={['fas', 'cog']} spin />
-            </Button>
-            <UncontrolledTooltip target="RefreshTooltip1">
-              Refresh
-            </UncontrolledTooltip>
-          </div>
+          <div className="card-header--title">Payments</div>
         </div>
         <CardBody>
           <div className="table-responsive-md">
@@ -67,10 +52,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Shanelle Wynn
+                          Matthew D. Webb
                         </a>
                         <span className="text-black-50 d-block">
-                          UI Engineer, Apple Inc.
+                          Monzo
                         </span>
                       </div>
                     </div>
@@ -117,10 +102,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Shanelle Wynn
+                          Matthew D. Webb
                         </a>
                         <span className="text-black-50 d-block">
-                          UI Engineer, Apple Inc.
+                          Amex
                         </span>
                       </div>
                     </div>
@@ -167,10 +152,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Regan Norris
+                          Matthew D. Webb
                         </a>
                         <span className="text-black-50 d-block">
-                          Senior Project Manager
+                          HSBC
                         </span>
                       </div>
                     </div>
@@ -216,10 +201,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Beck Simpson
+                          Matthew D. Webb
                         </a>
                         <span className="text-black-50 d-block">
-                          Frontend Developer
+                          Monzo
                         </span>
                       </div>
                     </div>

@@ -12,7 +12,7 @@ import {
   Button
 } from 'reactstrap';
 
-import svgImage9 from '../../../assets/images/illustrations/login.svg';
+import svgImage9 from '../../../assets/images/illustrations/data_points.svg';
 
 export default function LivePreviewExample() {
   return (
@@ -25,11 +25,11 @@ export default function LivePreviewExample() {
             outline
             color="first"
             className="btn-go-back"
-            to="/DashboardDefault">
+            to="/home">
             <span className="btn-wrapper--icon">
               <FontAwesomeIcon icon={['fas', 'arrow-left']} />
             </span>
-            <span className="btn-wrapper--label">Back to dashboard</span>
+            <span className="btn-wrapper--label">Back to Home</span>
           </Button>
           <div className="app-content p-0">
             <div className="app-content--inner d-flex align-items-center">
@@ -57,8 +57,7 @@ export default function LivePreviewExample() {
                                 Login to your account
                               </h1>
                               <p className="font-size-lg text-lg-left text-center mb-0 text-black-50">
-                                We're glad you're working on your app. Login
-                                below to continue.
+                                Time to get your nuts in order.
                               </p>
                             </span>
                             <div className="bg-white rounded p-4 my-4">
@@ -110,7 +109,7 @@ export default function LivePreviewExample() {
                                 <div className="form-group mb-4">
                                   <div className="d-flex justify-content-between">
                                     <label>Password</label>
-                                    <Link to="/PagesRecoverPassword">
+                                    <Link to="/recover-password">
                                       Forgot password?
                                     </Link>
                                   </div>
@@ -127,7 +126,7 @@ export default function LivePreviewExample() {
                             </div>
                             <div className="text-center pt-4 text-black-50">
                               Don't have an account?{' '}
-                              <Link to="/PagesRegister">Create an Account</Link>
+                              <Link to="/register">Create an Account</Link>
                             </div>
                           </div>
                         </div>

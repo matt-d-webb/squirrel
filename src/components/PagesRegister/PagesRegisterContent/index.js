@@ -85,7 +85,7 @@ const LivePreviewExample = () => {
                                   tag={Link}
                                   size="lg"
                                   color="warning"
-                                  to="/DashboardDefault">
+                                  to="/dashboard">
                                   <span className="btn-wrapper--icon">
                                     <FontAwesomeIcon
                                       icon={['fas', 'arrow-left']}

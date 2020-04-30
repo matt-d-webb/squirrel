@@ -109,7 +109,7 @@ export default class HeaderMenu extends Component {
                     <NavItem className="pt-1">
                       <Button
                         tag={Link}
-                        to="/DashboardDefault"
+                        to="/dashboard"
                         block={true}
                         outline={true}
                         color="first"

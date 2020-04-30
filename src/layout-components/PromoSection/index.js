@@ -206,11 +206,11 @@ export default class PromoSection extends Component {
               size="sm"
               outline
               color="primary"
-              href="https://uifort.com"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               title="Powerful admin dashboard templates & ui kits that are easy to use and customize.">
-              <span className="btn-wrapper--label">Visit UiFort.com</span>
+              <span className="btn-wrapper--label">Visit</span>
               <span className="btn-wrapper--icon">
                 <FontAwesomeIcon icon={['fas', 'arrow-right']} />
               </span>

@@ -29,13 +29,13 @@ const LandingPage = () => {
   const toggle = () => setCollapse(!collapse);
   return (
     <Fragment>
-      <div className="hero-wrapper bg-composed-wrapper bg-white">
+      <div className="hero-wrapper bg-composed-wrapper bg-mean-fruit">
         <div className="header-nav-wrapper header-nav-wrapper-lg w-100">
           <div className="container">
             <div className="header-nav-logo">
               <div className="nav-logo">
                 <a
-                  href="#/"
+                  href="/"
                   onClick={e => e.preventDefault()}
                   title="Squirrel">
                   <i>
@@ -51,17 +51,17 @@ const LandingPage = () => {
             <div className="header-nav-menu d-none d-lg-block">
               <Nav className="justify-content-center">
                 <NavItem>
-                  <NavLink tag={Link} to="/DashboardDefault">
+                  <NavLink tag={Link} to="/dashboard">
                     Dashboard
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/DashboardDefault">
+                  <NavLink tag={Link} to="/dashboard">
                     Spending
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/DashboardDefault">
+                  <NavLink tag={Link} to="/dashboard">
                     Saving
                   </NavLink>
                 </NavItem>
@@ -71,7 +71,7 @@ const LandingPage = () => {
               <span className="d-none d-lg-block">
                 <Button
                   tag={Link}
-                  to="/PagesLogin"
+                  to="/login"
                   className="btn-pill"
                   color="second">
                   Login
@@ -124,7 +124,7 @@ const LandingPage = () => {
                   </ListGroupItem>
                   <ListGroupItem className="p-2">
                     <Link
-                      to="/DashboardDefault"
+                      to="/dashboard"
                       className="d-flex px-2 align-items-center dropdown-item rounded">
                       <div className="align-box-row w-100">
                         <div className="mr-3">
@@ -202,11 +202,11 @@ const LandingPage = () => {
                   <ListGroupItem className="list-group-item-action align-box-row p-2">
                     <Button
                       tag="a"
-                      href="/DashboardDefault"
+                      href="/dashboard"
                       className="btn-pill"
                       color="second"
                       block>
-                      View Live Demo
+                      View
                     </Button>
                   </ListGroupItem>
                 </ListGroup>
@@ -294,7 +294,7 @@ const LandingPage = () => {
                     Integrations
                   </h3>
                   <p className="card-text px-3 px-xl-4 mb-4">
-                    Track your credit progress, see how you can quickly and easily improve your score.
+                    Track your credit progress, see how quickly and easily to improve your score.
                   </p>
                 </Card>
               </Col>
@@ -480,7 +480,7 @@ const LandingPage = () => {
             <NavItem>
               <NavLink
                 className="nav-link text-white-50"
-                href="https:&#x2F;&#x2F;dribbble.com&#x2F;UiFort"
+                href="https:&#x2F;&#x2F;dribbble.com&#x2F;"
                 rel="nofollow"
                 target="_blank"
                 id="btnDribbbleTooltip3457">
@@ -528,7 +528,7 @@ const LandingPage = () => {
                   </p>
                   <div id="mc_embed_signup">
                     <form
-                      action="https://gmail.us3.list-manage.com/subscribe/post?u=3ebc33a3d37f2278158d74721&amp;id=a122e673aa"
+                      action=""
                       className="validate"
                       id="mc-embedded-subscribe-form"
                       method="post"
@@ -598,7 +598,7 @@ const LandingPage = () => {
                 className="text-white"
                 href="https://squirrelmynuts.com"
                 title="SquirrelMyNuts">
-                SquirrelMyNuts.com
+                squirrelmynuts.com
               </a>
             </small>
           </div>

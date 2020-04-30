@@ -12,19 +12,19 @@ import { SidebarUserbox } from '../../layout-components';
 const sidebarMenuContent = [
   {
     label: 'Dashboards',
-    icon: 'pe-7s-safe',
+    icon: 'pe-7s-display1',
     content: [
       {
         label: 'Default',
         description:
           'This is a dashboard page example built using this template.',
-        to: '/DashboardDefault'
+        to: '/dashboard'
       },
       {
         label: 'Saving',
         description:
           'This is an example dashboard created using build-in elements and components.',
-        to: '/DashboardAnalytics'
+        to: '/dashboard'
       }
     ]
   }

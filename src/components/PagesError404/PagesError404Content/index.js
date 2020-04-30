@@ -22,7 +22,7 @@ export default function LivePreviewExample() {
         <div className="app-main">
           <Button
             tag={Link}
-            to="/DashboardDefault"
+            to="/dashboard"
             size="lg"
             color="success"
             className="btn-go-back">

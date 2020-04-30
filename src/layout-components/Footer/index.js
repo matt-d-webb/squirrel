@@ -17,7 +17,7 @@ const Footer = props => {
           'app-footer--opacity-bg': footerBgTransparent
         })}>
         <div className="app-footer--first">
-          <Nav>
+          {/* <Nav>
             <NavItem>
               <NavLink
                 tag={Link}
@@ -39,14 +39,10 @@ const Footer = props => {
                 CRM Manager
               </NavLink>
             </NavItem>
-          </Nav>
+          </Nav> */}
         </div>
         <div className="app-footer--second">
-          <span>Squirrel</span> © 2020
-          - crafted with <span className="text-danger px-1">❤</span> by{' '}
-          <a href="https://squirrelmynuts.com" target="_blank" title="squirrelmynuts.com">
-            squirrelmynuts.com
-          </a>
+          <span>Squirrel © 2020</span> 
         </div>
       </div>
     </Fragment>

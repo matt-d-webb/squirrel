@@ -43,7 +43,7 @@ class SidebarCollapsed extends Component {
           <div className="app-sidebar--header">
             <div className="nav-logo">
               <RouterLink
-                to="/DashboardDefault"
+                to="/dashboard"
                 activeClassName="active"
                 title="Squirrel">
                 <i>
@@ -63,7 +63,7 @@ class SidebarCollapsed extends Component {
                 <li>
                   <RouterLink
                     activeClassName="active"
-                    to="/DashboardDefault"
+                    to="/dashboard"
                     id="DashboardTooltip1">
                     <span>
                       <Settings className="line-height-1" />
@@ -210,7 +210,7 @@ class SidebarCollapsed extends Component {
                   tag={Link}
                   color="warning"
                   className="m-1 p-0 d-inline-block shadow-none text-center font-size-lg d-40 rounded"
-                  to="/DashboardDefault"
+                  to="/dashboard"
                   id="BacktoPreviousPageTooltip1">
                   <FontAwesomeIcon icon={['fas', 'arrow-left']} />
                 </Button>

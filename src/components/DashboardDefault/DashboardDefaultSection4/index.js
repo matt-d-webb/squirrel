@@ -114,7 +114,7 @@ export default function LivePreviewExample() {
                           Reports
                         </div>
                         <div className="font-size-md mb-1 text-black-50">
-                          Monthly Stats
+                          Expenditure
                         </div>
                       </Button>
                     </Col>
@@ -173,10 +173,10 @@ export default function LivePreviewExample() {
             </UncontrolledDropdown>
             <div className="card-header-alt px-4 pt-4 pb-0">
               <h6 className="font-weight-bold font-size-lg mb-1 text-black">
-                Weekly Sales
+               Expenditure
               </h6>
               <p className="text-black-50 mb-0">
-                Reports for what we sold this week.
+                Tracked spending
               </p>
             </div>
             <div>
@@ -203,10 +203,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Shanelle Wynn
+                          Tesco
                         </a>
                         <span className="text-black-50 d-block">
-                          UI Engineer, Apple Inc.
+                          Groceries
                         </span>
                       </div>
                     </div>
@@ -227,10 +227,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Akeem Griffith
+                          Gucci
                         </a>
                         <span className="text-black-50 d-block">
-                          Manager, Google Inc.
+                          Luxury Shoes
                         </span>
                       </div>
                     </div>
@@ -251,60 +251,10 @@ export default function LivePreviewExample() {
                           onClick={e => e.preventDefault()}
                           className="font-weight-bold text-black"
                           title="...">
-                          Abigayle Hicks
+                          Apple, Inc
                         </a>
                         <span className="text-black-50 d-block">
-                          Project Manager, Spotify
-                        </span>
-                      </div>
-                    </div>
-                    <Button size="sm" color="neutral-dark" className="ml-4">
-                      View
-                    </Button>
-                  </ListGroupItem>
-                  <ListGroupItem className="d-flex justify-content-between align-items-center py-3">
-                    <div className="d-flex align-items-center">
-                      <div className="avatar-icon-wrapper mr-2">
-                        <div className="avatar-icon">
-                          <img alt="..." src={avatar1} />
-                        </div>
-                      </div>
-                      <div>
-                        <a
-                          href="#/"
-                          onClick={e => e.preventDefault()}
-                          className="font-weight-bold text-black"
-                          title="...">
-                          Reece Corbett
-                        </a>
-                        <span className="text-black-50 d-block">
-                          Senior Designer, Amazon Inc.
-                        </span>
-                      </div>
-                    </div>
-                    <div>
-                      <Button size="sm" color="neutral-dark" className="ml-4">
-                        View
-                      </Button>
-                    </div>
-                  </ListGroupItem>
-                  <ListGroupItem className="d-flex justify-content-between align-items-center py-3">
-                    <div className="d-flex align-items-center">
-                      <div className="avatar-icon-wrapper mr-2">
-                        <div className="avatar-icon">
-                          <img alt="..." src={avatar5} />
-                        </div>
-                      </div>
-                      <div>
-                        <a
-                          href="#/"
-                          onClick={e => e.preventDefault()}
-                          className="font-weight-bold text-black"
-                          title="...">
-                          Reece Corbett
-                        </a>
-                        <span className="text-black-50 d-block">
-                          Senior Designer, Amazon Inc.
+                          Technology
                         </span>
                       </div>
                     </div>
@@ -317,7 +267,7 @@ export default function LivePreviewExample() {
             </div>
             <div className="card-footer p-3 text-center">
               <Button size="sm" color="primary">
-                <span className="btn-wrapper--label">View all employees</span>
+                <span className="btn-wrapper--label">View all</span>
                 <span className="btn-wrapper--icon">
                   <FontAwesomeIcon icon={['fas', 'arrow-right']} />
                 </span>
@@ -343,7 +293,7 @@ export default function LivePreviewExample() {
                       />
                     </h3>
                     <p className="font-size-lg text-black-50 mb-0">
-                      Total Orders
+                      Monthly Spend
                     </p>
                   </div>
                   <Button
@@ -383,7 +333,7 @@ export default function LivePreviewExample() {
                     />
                   </h3>
                   <p className="font-size-lg text-white-50 mb-0">
-                    Total Visitors
+                    Year Spending
                   </p>
                 </div>
                 <div className="pr-5 pb-3">
@@ -417,7 +367,7 @@ export default function LivePreviewExample() {
                     />
                   </h3>
                   <p className="font-size-lg text-white-50 mb-0">
-                    Total Deliveries
+                     Total Credit
                   </p>
                 </div>
                 <div className="pr-5 pb-3">

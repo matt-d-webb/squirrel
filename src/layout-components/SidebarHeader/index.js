@@ -17,7 +17,7 @@ class SidebarHeader extends Component {
         <div className="app-sidebar--header">
           <div className="nav-logo">
             <Link
-              to="/DashboardDefault"
+              to="/"
               title="Squirrel">
               <i>
                 <img

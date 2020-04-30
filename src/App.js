@@ -259,7 +259,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter basename="/home/">
+        <BrowserRouter basename="/">
           <ScrollToTop>
             <Routes />
           </ScrollToTop>

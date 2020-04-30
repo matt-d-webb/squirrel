@@ -98,9 +98,9 @@ export default class SidebarUserbox extends Component {
             </div>
           </div>
           <div className="my-3 userbox-details">
-            Emma Taylor
+            Matthew D Webb
             <small className="d-block text-white-50">
-              (emma.taylor@uifort.com)
+              (matt.d.webb)
             </small>
           </div>
           <Link size="sm" className="btn-userbox" to="/PagesProfile">

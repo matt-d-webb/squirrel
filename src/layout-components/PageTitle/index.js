@@ -71,7 +71,7 @@ class PageTitle extends Component {
                   </Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <Link to="/DashboardDefault">Dashboards</Link>
+                  <Link to="/dashboard">Dashboards</Link>
                 </li>
                 <li className="breadcrumb-item active">
                   <span>{this.props.titleHeading}</span>
@@ -83,7 +83,7 @@ class PageTitle extends Component {
               {pageTitleIconBox && (
                 <div className="app-page-title--iconbox d-70">
                   <div className="d-70 d-flex gradient-icon align-items-center justify-content-center">
-                    <i className="pe-7s-umbrella display-3 gradient-icon bg-ripe-malin"></i>
+                    <i className="pe-7s-piggy display-3 gradient-icon bg-ripe-malin"></i>
                   </div>
                 </div>
               )}
@@ -97,7 +97,7 @@ class PageTitle extends Component {
               </div>
             </div>
           </div>
-          <div className="d-flex align-items-center">
+          {/* <div className="d-flex align-items-center">
             <Button
               onClick={this.toggleModal}
               size="sm"
@@ -209,7 +209,7 @@ class PageTitle extends Component {
             <UncontrolledTooltip target="AddEntryTooltip20">
               Add new entry
             </UncontrolledTooltip>
-          </div>
+          </div> */}
         </div>
 
         <Modal

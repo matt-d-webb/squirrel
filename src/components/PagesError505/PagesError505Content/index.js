@@ -47,7 +47,7 @@ export default function LivePreviewExample() {
                         </p>
                         <Button
                           tag={Link}
-                          to="/DashboardDefault"
+                          to="/dashboard"
                           color="first"
                           size="lg"
                           className="px-5 mt-4 mb-3">

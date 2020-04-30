@@ -16,15 +16,8 @@ import PagesLogin from './pages/PagesLogin';
 import PagesProfile from './pages/PagesProfile';
 import PagesRegister from './pages/PagesRegister';
 
-
-
 const DashboardDefault = lazy(() => import('./pages/DashboardDefault'));
 const LandingPage = lazy(() => import('./pages/LandingPage'));
-const HeaderSections = lazy(() => import('./pages/HeaderSections'));
-
-const LoadingIndicators = lazy(() =>
-  import('./pages/LoadingIndicators')
-);
 
 
 
@@ -70,8 +63,8 @@ const Routes = () => {
     <AnimatePresence>
       <Suspense fallback={<SuspenseLoading />}>
         <Switch>
-          <Redirect exact from="/" to="/LandingPage" />
-          <Route path={['/LandingPage']}>
+          <Redirect exact from="/" to="/home" />
+          <Route path={['/home']}>
             <PresentationLayout>
               <Switch location={location} key={location.pathname}>
                 <motion.div
@@ -80,15 +73,13 @@ const Routes = () => {
                   exit="out"
                   variants={pageVariants}
                   transition={pageTransition}>
-                  <Route path="/LandingPage" component={LandingPage} />
+                  <Route path="/home" component={LandingPage} />
                 </motion.div>
               </Switch>
             </PresentationLayout>
           </Route>
-          <Route
-            path={[
-              '/PagesLogin',
-            ]}>
+
+          <Route path={['/login' ]}>
             <MinimalLayout>
               <Switch location={location} key={location.pathname}>
                 <motion.div
@@ -97,14 +88,16 @@ const Routes = () => {
                   exit="out"
                   variants={pageVariants}
                   transition={pageTransition}>
-                  <Route path="/PagesLogin" component={PagesLogin} />
+                  <Route path="/login" component={PagesLogin} />
                   <Route path="/PagesRegister" component={PagesRegister} />
                 </motion.div>
               </Switch>
             </MinimalLayout>
           </Route>
+          <Route path="/profile" component={PagesProfile} />
+
           <Route
-            path={['/DashboardDefault']}>
+            path={['/dashboard']}>
             <LeftSidebar>
               <Switch location={location} key={location.pathname}>
                 <motion.div
@@ -114,13 +107,10 @@ const Routes = () => {
                   variants={pageVariants}
                   transition={pageTransition}>
                   <Route
-                    path="/DashboardDefault"
+                    path="/dashboard"
                     component={DashboardDefault}
                   />
-
-                  <Route path="/PagesProfile" component={PagesProfile} />
-                  <Route path="/HeaderSections" component={HeaderSections} />
-                  <Route path="/LoadingIndicators" component={LoadingIndicators}/>
+                  <Route path="/profile" component={PagesProfile} />
                 </motion.div>
               </Switch>
             </LeftSidebar>
