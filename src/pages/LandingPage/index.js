@@ -404,7 +404,7 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="divider border-2 d-sm-none d-md-block rounded-circle border-white bg-white opacity-2 mx-auto mb-4 mt-5 w-50" />
-          <Nav className="nav-transparent justify-content-center">
+          {/* <Nav className="nav-transparent justify-content-center">
             <NavItem>
               <NavLink
                 className="nav-link text-white-50"
@@ -513,7 +513,7 @@ const LandingPage = () => {
                 Github
               </UncontrolledTooltip>
             </NavItem>
-          </Nav>
+          </Nav> */}
           <div className="divider border-2 d-sm-none d-md-block rounded-circle border-white bg-white opacity-2 mx-auto my-4 w-50" />
           <div className="px-0 col-lg-6 col-md-8 col-sm-12 mx-auto text-center">
             <Card className="border-0 mt-5 card-box">

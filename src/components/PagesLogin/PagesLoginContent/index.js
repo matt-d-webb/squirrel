@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
-
+import React, { Fragment, setState } from 'react';
 import { Link } from 'react-router-dom';
+import { logout, signInWithGoogle, signInWithGitHub } from "../../../helpers/auth";
+import { auth } from "../../../services/firebase";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
@@ -14,7 +15,27 @@ import {
 
 import svgImage9 from '../../../assets/images/illustrations/data_points.svg';
 
+
+
 export default function LivePreviewExample() {
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+    } catch (error) {
+      console.log("some err", error);
+    }
+  }
+
+  auth().onAuthStateChanged(user => {
+    console.log('State', user);
+    if (user) {
+    } else {
+    }
+  });
+
+
+
   return (
     <Fragment>
       <div className="app-wrapper min-vh-100">
@@ -69,7 +90,9 @@ export default function LivePreviewExample() {
                                   <Button
                                     color="facebook"
                                     block
-                                    id="btnFacebookTooltip">
+                                    id="btnFacebookTooltip"
+                                    onClick={() => logout()}
+                                    >
                                     <span className="btn-wrapper--icon">
                                       <FontAwesomeIcon
                                         icon={['fab', 'facebook']}
@@ -84,10 +107,12 @@ export default function LivePreviewExample() {
                                   <Button
                                     color="twitter"
                                     block
-                                    id="btnTwitterTooltip">
+                                    id="btnTwitterTooltip"
+                                    onClick={() => handleGoogleSignIn()}
+                                  >
                                     <span className="btn-wrapper--icon">
                                       <FontAwesomeIcon
-                                        icon={['fab', 'twitter']}
+                                        icon={['fab', 'google']}
                                       />
                                     </span>
                                   </Button>
