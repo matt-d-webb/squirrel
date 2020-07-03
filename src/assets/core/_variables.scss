@@ -1225,7 +1225,7 @@ $box-shadow-layout-left:
         -0.125rem 0 0.1875rem rgba($gray-900,.03);
 
 
-// Bamburgh React Admin Dashboard with Reactstrap PRO Layout Components
+// Squirrel Layout Components
 
 @import "../layout-components/Header/variables";
 @import "../layout-components/HeaderDrawer/variables";
@@ -1237,14 +1237,16 @@ $box-shadow-layout-left:
 @import "../layout-components/Footer/variables";
 @import "../layout-components/ThemeConfigurator/variables";
 
-// Bamburgh React Admin Dashboard with Reactstrap PRO Layout Blueprints
+// Squirrel Layout Blueprints
 
 @import "../layout-blueprints/LeftSidebar/variables";
 @import "../layout-blueprints/CollapsedSidebar/variables";
 
-// Bamburgh React Admin Dashboard with Reactstrap PRO Components
+// Squirrel Components
 
 @import "../components/ProgressBars/variables";
 @import "../components/NavigationMenus/NavigationMenusVerticalBasic/variables";
+@import "../components/FooterSections/FooterSections1/variables";
+@import "../components/HeaderSections/HeaderSections1/variables";
 
 

@@ -1,0 +1,6 @@
+//  Core
+
+.input-group > .react-datepicker-wrapper:not(:first-child) .form-control,
+.input-group > .react-datepicker-wrapper:not(:first-child) {
+  @include border-left-radius(0);
+}
