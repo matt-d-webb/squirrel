@@ -27,7 +27,7 @@
     "react-bootstrap-typeahead": "3.4.7",
     "react-dropzone": "10.2.1",
     "react-loki": "1.2.0",
-    "react-draft-wysiwyg": "1.14.4",
+    "react-draft-wysiwyg": "1.14.6",
     "draft-js": "0.11.4",
     "draftjs-to-html": "0.9.1",
     "html-to-draftjs": "01.5.0",
